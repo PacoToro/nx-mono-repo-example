@@ -1,0 +1,10 @@
+<h1>Back shop</h1>
+
+<h2>All orders</h2>
+
+<example-orders [orders]="orders"></example-orders>
+
+<p>
+  <input type="text" #order placeholder="Order id" size="7" />
+  <button id="add-order" (click)="sendOrder(order.value)">Send order</button>
+</p>

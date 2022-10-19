@@ -1,0 +1,29 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@example/apps/store/feature-orders": [
+        "libs/apps/store/feature-orders/src/index.ts"
+      ],
+      "@example/apps/store/feature-welcome": [
+        "libs/apps/store/feature-welcome/src/index.ts"
+      ],
+      "@example/data": ["libs/data/src/index.ts"],
+      "@example/ui": ["libs/ui/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}
