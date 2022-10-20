@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Order } from '@example/data';
+import { OrdersService } from '@example/data-order';
 
 @Component({
   selector: 'example-my-orders',
@@ -10,18 +11,16 @@ import { Order } from '@example/data';
 export class MyOrdersComponent {
   orders: Order[] = [];
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private orderService: OrdersService) {
     this.fetch();
   }
 
   fetch() {
-    this.http
-      .get<Order[]>('/api/orders')
-      .subscribe((res) => (this.orders = res));
+    this.orderService.fetch().subscribe((res) => (this.orders = res));
   }
 
   addOrder() {
-    this.http.post('/api/addOrder', {}).subscribe(() => {
+    this.orderService.addOrder().subscribe(() => {
       this.fetch();
     });
   }

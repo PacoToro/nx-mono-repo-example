@@ -22,6 +22,7 @@
         "libs/apps/store/feature-welcome/src/index.ts"
       ],
       "@example/data": ["libs/data/src/index.ts"],
+      "@example/data-order": ["libs/data-order/src/index.ts"],
       "@example/ui": ["libs/ui/src/index.ts"]
     }
   },
